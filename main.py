@@ -13,7 +13,6 @@ def are_matching(left, right):
     return (left + right) in ["()", "[]", "{}"]
 
 def find_mismatch(text):
-    #result = 0
     isBracketFound = False
     opening_brackets_stack = []
     
@@ -31,13 +30,16 @@ def find_mismatch(text):
                 if are_matching(lastElement.char, next) : 
                     opening_brackets_stack.remove(lastElement)
                 else :
-                    #result = i + 1
                     return i + 1
-                return 'Success'
+            else: return 1
     if isBracketFound == False:
         return 'Success'
     else:
-        return 1
+        if len(opening_brackets_stack) == 0:
+            return 'Success'
+        else:
+            return 1
+
 
 def main():
     path = os.getcwd() + '/test'
