@@ -40,7 +40,7 @@ def find_mismatch(text):
         return 1
 
 def main():
-    path = os.getcwd() + '/test'
+    path = os.getcwd() + '/test//'
     os.chdir(path)
     #check = input()
     #if check == 'F':
