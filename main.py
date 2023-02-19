@@ -40,12 +40,12 @@ def find_mismatch(text):
         return 1
 
 def main():
-    path = os.getcwd() + '/test//'
+    path = os.getcwd() + '/test'
     os.chdir(path)
     #check = input()
     #if check == 'F':
     for file in os.listdir():
-        file_path = f"{path}\{file}"
+        file_path = f"{path}/{file}"
         text = read_text_file(file_path)
         mismatch = find_mismatch(text)
         print(mismatch)
